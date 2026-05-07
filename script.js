@@ -6,9 +6,12 @@ copyButton?.addEventListener("click", async () => {
     await navigator.clipboard.writeText(value);
     copyButton.textContent = "copied";
     window.setTimeout(() => {
-      copyButton.textContent = value;
+      copyButton.textContent = "CA";
     }, 900);
   } catch {
     copyButton.textContent = "copy failed";
+    window.setTimeout(() => {
+      copyButton.textContent = "CA";
+    }, 900);
   }
 });
